@@ -1,0 +1,28 @@
+{% extends 'learning_logs/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+
+ <h1>Topics</h1>
+{% endblock page_header %}
+
+{% block content %}
+
+ <ul class="list-group border-bottom pb-2 mb-4">
+    {% for topic in topics %}
+      <li class="list-group-item border-0">
+        <div class="d-grid gap-2">
+        <a href="{% url 'learning_logs:topic' topic.id %}" 
+          class="btn btn-outline-secondary btn-md mt-1 border-0 text-start ">
+        {{ topic.text }}</a></div></li>
+    {% empty %}
+      <li class="list-group-item border-0">No topic have been added yet.</li>
+    {% endfor %}
+ </ul>
+
+ <a href="{% url 'learning_logs:new_topic' %}"
+     class="btn btn-primary btn-md mt-0"> Add a new topic</a>
+
+ {% endblock content %}
+
+ 
