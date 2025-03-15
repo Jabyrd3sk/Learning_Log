@@ -3,7 +3,10 @@
 
 
 {% block page_header %}
-  <h1>Add a new topic</h1>
+<a href="{% url 'learning_logs:topics' %}"
+  class="bi bi-arrow-left btn btn-outline-light btn-md ps-2 border-0 text-start text-dark" ></a>
+
+<h1>Add a new topic</h1>
 {% endblock page_header %}
 
 {% block content %}

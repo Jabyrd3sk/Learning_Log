@@ -2,8 +2,11 @@
 {% load django_bootstrap5 %}
 
 {% block page_header %}
-  <a href="{% url 'learning_logs:topic' topic.id %}" class="btn text-dark"> 
-    <h1>{{ topic }}</h1></a>
+  <a href="{% url 'learning_logs:topic' topic.id %}" 
+    class="bi bi-arrow-left btn btn-outline-light btn-md ps-2 border-0 text-start text-dark"></a>
+
+    <h1>{{ topic }}</h1>
+
 {% endblock page_header %}
 
 {% block content %}
